@@ -1,4 +1,4 @@
-package stepdefination;
+package stepdefination_Login;
 
 import java.time.Duration;
 import org.openqa.selenium.By;
@@ -22,6 +22,7 @@ public class Login
 	@When("enter URL")
 	public void enter_url() {
 		driver.manage().window().maximize();
+		
 		driver.get("http://localhost:8888");
 	}
 
@@ -61,6 +62,8 @@ public class Login
 	public void enter_password(String pwd) {
 		driver.findElement(By.name("user_password")).sendKeys(pwd);
 	}
+	
+	
 
 
 

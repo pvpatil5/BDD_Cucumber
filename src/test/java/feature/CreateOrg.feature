@@ -1,5 +1,16 @@
  Feature: Craete Org
  
+  @SmokeTest
+ Scenario: Just Login
+    Given Launch browser
+    And enterURL "http://localhost:8888"
+    When login page is displayed
+    Then enterusername "admin"
+    And enterpassword "12345"
+    Then click on login button
+    And verify the homepage title
+ 
+ @RegressionTest
  Scenario Outline: 
     Given Launch browser
     And enterURL "http://localhost:8888"
@@ -23,3 +34,5 @@
       | Microsoft_HYD |  |       77777 |
       | Facebook_HYD  |  |       78910 |
       | IBM_HYD       |  |       45758 |
+      
+    
